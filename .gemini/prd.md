@@ -70,21 +70,20 @@
 - **메인 비주얼**: 수달과 사람들이 함께 수영하거나 교감하는 고화질 영상/슬라이드
 - **메인 카피**: "수달과 함께 헤엄치는 특별한 경험, 이웃집수달에 오신 것을 환영합니다!"
 - **핵심 CTA 버튼**:
-    - `[네이버 예약하기]` (primary) - 네이버 예약 페이지로 리다이렉트
-    - `[이용안내 바로가기]` (secondary)
+  - `[네이버 예약하기]` (primary) - 네이버 예약 페이지로 리다이렉트
+  - `[이용안내 바로가기]` (secondary)
 
 **기술적 구현**:
 
 ```tsx
 interface HeroSection {
-  backgroundMedia: 'video' | 'slideshow';
-  autoPlay: boolean;
+  backgroundMedia: 'video' | 'slideshow'
+  autoPlay: boolean
   ctaButtons: {
-    primary: { text: string; naverReservationUrl: string; };
-    secondary: { text: string; link: string; };
-  };
+    primary: { text: string; naverReservationUrl: string }
+    secondary: { text: string; link: string }
+  }
 }
-
 ```
 
 **애니메이션 효과**:
@@ -118,14 +117,13 @@ interface HeroSection {
 interface YouTubeSection {
   // 정적으로 관리되는 영상 목록
   featuredVideos: {
-    videoId: string;
-    title: string;
-    embedUrl: string;
-  }[];
-  channelUrl: string;
-  subscriberCountText: string; // 수동으로 업데이트
+    videoId: string
+    title: string
+    embedUrl: string
+  }[]
+  channelUrl: string
+  subscriberCountText: string // 수동으로 업데이트
 }
-
 ```
 
 ### 4.1.4 미디어 스포트라이트 섹션
@@ -169,10 +167,10 @@ interface YouTubeSection {
 
 - 슬로건: "행복한 동물이 사람에게도 행복을 줍니다."
 - 동물 복지 노력사항:
-    - 청결한 환경 유지
-    - 정기적인 건강검진
-    - 충분한 휴식 보장
-    - 스트레스 최소화
+  - 청결한 환경 유지
+  - 정기적인 건강검진
+  - 충분한 휴식 보장
+  - 스트레스 최소화
 
 **시각적 요소**:
 
@@ -195,28 +193,27 @@ interface YouTubeSection {
 
 - 각 수달의 개별 프로필 (정적 데이터로 관리)
 - 프로필 정보:
-    - 이름
-    - 나이/생년월일
-    - 성격 특징
-    - 취미/특기
-    - 좋아하는 음식
-    - TMI (팬들만 아는 소소한 정보)
+  - 이름
+  - 나이/생년월일
+  - 성격 특징
+  - 취미/특기
+  - 좋아하는 음식
+  - TMI (팬들만 아는 소소한 정보)
 
 **콘텐츠 예시**:
 
 ```typescript
 const otterProfiles = [
   {
-    name: "도리",
+    name: '도리',
     age: 3,
-    personality: "애교쟁이 먹보",
-    hobby: "조개까기 달인",
-    favoriteFood: "새우",
-    tmi: "오후 3시만 되면 꼭 낮잠을 자요!",
-    images: ["/images/otters/dori-1.jpg", "/images/otters/dori-2.jpg"]
-  }
-];
-
+    personality: '애교쟁이 먹보',
+    hobby: '조개까기 달인',
+    favoriteFood: '새우',
+    tmi: '오후 3시만 되면 꼭 낮잠을 자요!',
+    images: ['/images/otters/dori-1.jpg', '/images/otters/dori-2.jpg'],
+  },
+]
 ```
 
 **시각적 요소**:
@@ -272,16 +269,15 @@ const otterProfiles = [
 
 ```tsx
 interface NaverReservation {
-  naverBookingUrl: string;
+  naverBookingUrl: string
   programs: {
-    id: string;
-    name: string;
-    price: string;
-    description: string;
-    naverReservationLink: string;
-  }[];
+    id: string
+    name: string
+    price: string
+    description: string
+    naverReservationLink: string
+  }[]
 }
-
 ```
 
 **예약 플로우**:
@@ -393,16 +389,15 @@ interface NaverReservation {
 ```tsx
 interface ReviewSection {
   curatedReviews: {
-    id: string;
-    author: string;
-    content: string;
-    images: string[];
-    date: string;
-    platform: 'instagram' | 'blog' | 'direct';
-  }[];
-  instagramEmbedUrl?: string; // 인스타그램 위젯
+    id: string
+    author: string
+    content: string
+    images: string[]
+    date: string
+    platform: 'instagram' | 'blog' | 'direct'
+  }[]
+  instagramEmbedUrl?: string // 인스타그램 위젯
 }
-
 ```
 
 ### 4.6.3 포토 갤러리
@@ -444,21 +439,20 @@ interface ReviewSection {
 ```css
 :root {
   /* Primary Colors - 수달의 자연스러운 색감 */
-  --primary-brown: #8B4513;
-  --primary-orange: #FF8C42;
-  --primary-cream: #FFF8DC;
+  --primary-brown: #8b4513;
+  --primary-orange: #ff8c42;
+  --primary-cream: #fff8dc;
 
   /* Secondary Colors */
-  --water-blue: #4A90E2;
-  --grass-green: #7CB342;
-  --warm-yellow: #FFD54F;
+  --water-blue: #4a90e2;
+  --grass-green: #7cb342;
+  --warm-yellow: #ffd54f;
 
   /* Neutral Colors */
-  --text-dark: #2C1810;
-  --text-light: #6B5B73;
-  --background: #FDFBF8;
+  --text-dark: #2c1810;
+  --text-light: #6b5b73;
+  --background: #fdfbf8;
 }
-
 ```
 
 ### 5.1.2 타이포그래피
@@ -482,9 +476,8 @@ const pageTransition = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
   exit: { opacity: 0, y: -20 },
-  transition: { duration: 0.3, ease: "easeInOut" }
-};
-
+  transition: { duration: 0.3, ease: 'easeInOut' },
+}
 ```
 
 ### 5.2.2 요소별 애니메이션
@@ -516,9 +509,8 @@ const breakpoints = {
   mobile: '320px',
   tablet: '768px',
   desktop: '1024px',
-  wide: '1440px'
-};
-
+  wide: '1440px',
+}
 ```
 
 ### 6.3 접근성 (A11y)
@@ -534,38 +526,39 @@ const breakpoints = {
 interface ExternalServices {
   // 네이버 예약 시스템
   naverBooking: {
-    baseUrl: string;
-    programLinks: Record<string, string>;
-  };
-  
+    baseUrl: string
+    programLinks: Record<string, string>
+  }
+
   // 지도 서비스
   maps: {
-    kakao?: { embedUrl: string; };
-    naver?: { embedUrl: string; };
-  };
-  
+    kakao?: { embedUrl: string }
+    naver?: { embedUrl: string }
+  }
+
   // 소셜 미디어
   social: {
     youtube: {
-      channelUrl: string;
-      featuredVideos: string[];
-    };
+      channelUrl: string
+      featuredVideos: string[]
+    }
     instagram?: {
-      embedCode: string; // 위젯 임베드 코드
-    };
-  };
+      embedCode: string // 위젯 임베드 코드
+    }
+  }
 }
-
 ```
 
 ### 6.5 데이터 관리 전략
 
 **정적 데이터 관리**:
+
 - 동물 프로필: JSON 파일 또는 TypeScript 상수
 - 프로그램 정보: 정적 데이터 파일
 - 공지사항: 마크다운 파일 또는 무료 Headless CMS
 
 **환경 변수 관리**:
+
 ```env
 # 공개 가능한 정보만
 NEXT_PUBLIC_NAVER_BOOKING_URL=https://booking.naver.com/booking/...

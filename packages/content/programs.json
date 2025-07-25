@@ -1,0 +1,20 @@
+[
+  {
+    "id": "basic-experience",
+    "name": "기본 입장 및 교감 체험",
+    "description": "수달과 직접 만나 교감하고 먹이를 줄 수 있는 기본 체험 프로그램입니다.",
+    "price": "성인 15,000원 / 어린이 10,000원",
+    "duration": "약 60분",
+    "notes": "먹이 별도 구매 가능합니다.",
+    "naverReservationLink": "https://booking.naver.com/booking/5/" 
+  },
+  {
+    "id": "swim-with-otter",
+    "name": "[SPECIAL] 수달과 수영하기",
+    "description": "국내 유일! 수달과 함께 수영하며 잊지 못할 추억을 만들어보세요. 100% 예약제로 운영됩니다.",
+    "price": "1인 100,000원",
+    "duration": "약 90분",
+    "notes": "사전 예약 필수, 참가 조건 확인 요망.",
+    "naverReservationLink": "https://booking.naver.com/booking/6/" 
+  }
+]

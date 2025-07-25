@@ -4,10 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "pnpm --filter web dev",
+    "lint": "pnpm --filter web lint",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.11.0"
+  "packageManager": "pnpm@10.11.0",
+  "devDependencies": {
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.6.2"
+  },
+  "dependencies": {
+    "browserslist": "^4.25.1",
+    "caniuse-lite": "^1.0.30001727"
+  }
 }

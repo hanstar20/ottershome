@@ -1,0 +1,28 @@
+[
+  {
+    "id": "dori",
+    "name": "도리",
+    "age": 3,
+    "personality": "애교쟁이 먹보",
+    "hobby": "조개까기 달인",
+    "favoriteFood": "새우",
+    "tmi": "오후 3시만 되면 꼭 낮잠을 자요!",
+    "images": [
+      "/images/otters/dori-1.jpg",
+      "/images/otters/dori-2.jpg"
+    ]
+  },
+  {
+    "id": "nami",
+    "name": "나미",
+    "age": 2,
+    "personality": "장난꾸러기 호기심쟁이",
+    "hobby": "물장구치기",
+    "favoriteFood": "미꾸라지",
+    "tmi": "도리 형아를 졸졸 따라다녀요!",
+    "images": [
+      "/images/otters/nami-1.jpg",
+      "/images/otters/nami-2.jpg"
+    ]
+  }
+]
